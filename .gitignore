@@ -1,28 +1,70 @@
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
-.angular/
+# -----------------------------------------------------------------------------
+# Dependency Directories
+# -----------------------------------------------------------------------------
+# Node.js module folder
+/node_modules
 
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
+# -----------------------------------------------------------------------------
+# TypeScript / Compilation Outputs
+# -----------------------------------------------------------------------------
+# JavaScript compiled files (commonly .js and .js.map files)
+# Change 'dist' to whatever your TypeScript compiler output directory is.
+/dist
+/build
 
-# Environment files
-/.env
+# Common output files (e.g., if you compile to the source directory)
+*.js
+*.js.map
+!/src/**/
+!/src/**/*.d.ts
 
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
+# TypeScript declaration files (usually generated in 'dist' or 'build')
+# Note: If you publish your library, you might want to keep these, but
+# for an application project, they are often excluded.
+# *.d.ts
+# !/src/**/*.d.ts
 
-# TypeScript cache
-*.tsbuildinfo
+# -----------------------------------------------------------------------------
+# Lock Files
+# -----------------------------------------------------------------------------
+# Package manager lock files (optional, but often excluded for clean builds)
+# Many teams DO commit package-lock.json/yarn.lock/pnpm-lock.yaml for deterministic builds,
+# so uncomment these only if you explicitly choose not to.
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
 
-# Logs
+# -----------------------------------------------------------------------------
+# Logs and Caches
+# -----------------------------------------------------------------------------
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+# Diagnostic file produced by VS Code
+.vscode-test-results.json
+# Output of 'npm pack'
+*.tgz
+
+# -----------------------------------------------------------------------------
+# OS/Editor Specific Files
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# Windows/macOS/Linux system files
+.idea/
+.project
+.classpath
+.c9/
+.dist
+# -----------------------------------------------------------------------------
+# Testing and Coverage
+# -----------------------------------------------------------------------------
+/coverage
+/.nyc_output
